@@ -71,3 +71,7 @@ out/
 # Nuxt.js
 .nuxt/
 .output/ 
+
+# VitePress
+docs/.vitepress/dist/
+docs/.vitepress/cache/
