@@ -1,93 +1,91 @@
-# Cursor Pro 自动化工具使用说明
+# Cursor Pro Automation Tool User Guide
 
-自动注册账号，自动刷新本地token，解放双手。
+Automatic account registration, automatic local token refresh, hands-free operation.
 
-## 使用前提
+## Prerequisites
 
-::: warning 如何快速开始？
+::: warning How to Get Started Quickly?
 
-1.确保电脑安装了Google Chrome浏览器，没有？[请点击这里下载。](https://www.google.cn/intl/zh-CN/chrome/)
+1. Make sure Google Chrome browser is installed on your computer. Don't have it? [Click here to download.](https://www.google.cn/intl/en/chrome/)
 
-2.Cursor Web端必须登录账号，不管账号是否有效，登录是必须的。
+2. You must be logged in to Cursor Web, regardless of whether the account is valid or not, login is mandatory.
 
-3.确保电脑网络流畅，最好有国外的节点。不要开全局代理！
+3. Ensure smooth internet connection, preferably with international access. Don't use global proxy!
 :::
 
-## 下载地址
+## Download Link
 
 https://github.com/chengazhen/cursor-auto-free/releases
 
-> 根据自己电脑版本来选择，Mac注意一定要选择对应的版本，Apple Silicon(m芯片)请选择ARM64(aarch64)。
-> Mac执行脚本还要一条命令变为可执行文件。
+> Choose according to your computer version. For Mac, make sure to select the corresponding version - Apple Silicon (M chip) users should select ARM64 (aarch64).
+> For Mac, you need to make the script executable with the following command:
 
 ```shell
 chmod +x ./CursorPro
 ```
 
-双击执行即可执行，如果出现下图的情况，[点击这里查看解决方法](https://sysin.org/blog/macos-if-crashes-when-opening/)
+Double-click to execute. If you encounter the following situation, [click here for the solution](https://sysin.org/blog/macos-if-crashes-when-opening/)
 
-![一张图片](./assets/imgs/6.png)
+![Image](./assets/imgs/6.png)
 
+## Configuration Required Before Using the Script:
 
-## 使用脚本前需进行以下配置：
+1. Using [Temp Mail](https://tempmail.plus/en/#!)
+> (1) Host your domain on CF, after hosting, click on Email on the left side. (As shown below)
 
-1.使用[Temp Mail临时邮箱](https://tempmail.plus/zh/#!)
->（1）将自己的域名托管到CF，托管好后点击左侧的电子邮件。（如下图）
+![Image](./assets/imgs/1.jpg)
 
-![一张图片](./assets/imgs/1.jpg)
+> Then click on Routing Rules
 
-> 然后点击路由规则
+![Image](./assets/imgs/2.jpg)
 
-![一张图片](./assets/imgs/2.jpg)
+> Click Edit on the right
 
-> 点击右侧编辑
+![Image](./assets/imgs/3.jpg)
 
-![一张图片](./assets/imgs/3.jpg)
+> Select "Forward to Email" for Action, fill in your temporary email in the destination
 
-> 操作选择发送到电子邮件，目标位置填你的临时邮箱
+![Image](./assets/imgs/4.jpg)
 
-![一张图片](./assets/imgs/4.jpg)
+> After CF configuration, download [.env.example](https://github.com/chengazhen/cursor-auto-free)
 
-> CF配置好之后，下载[.env.example](https://github.com/chengazhen/cursor-auto-free)
+![Image](./assets/imgs/5.jpg)
 
-![一张图片](./assets/imgs/5.jpg)
-
-重命名为.env，mac如果出现无法更改的情况。请打开终端，cd到你的项目目录，使用以下命令创建。
+Rename it to .env. For Mac, if you can't change it, open terminal, cd to your project directory, and use the following command:
 ```shell
 touch .env
 ```
 
-> 创建好.env文件后还需进行配置：
+> After creating the .env file, configure it:
 > 
-> DOMAIN='xxxxx.me'    # 你的邮箱域名
+> DOMAIN='xxxxx.me'    # Your email domain
 > 
-> TEMP_MAIL='xxxxxx'   # 临时邮箱，就是你cloudflare设置的目标位置
+> TEMP_MAIL='xxxxxx'   # Temporary email, the destination you set in Cloudflare
 
-2.使用 IMAP 来代替 tempmail.plus 邮箱
+2. Using IMAP instead of tempmail.plus
 
-还是进入.env文件进行配置：
+Configure in the .env file:
 ```text
 DOMAIN='wozhangsan.me'
 TEMP_MAIL=null
 
-# IMAP服务器
-IMAP_SERVER=imap.xxxxx.com (例如：qq邮箱，谷歌邮箱）
-# IMAP的SSL端口
-IMAP_PORT=993  （可以google搜索端口，QQ是995，Gmail是993）
-# 使用cf转发到的邮箱
-IMAP_USER=xxxxxx@xxxxx.com （你的QQ邮箱或者谷歌邮箱，需要在CF配置为catch-all，参考上面步骤）
-# 邮箱授权码
+# IMAP server
+IMAP_SERVER=imap.xxxxx.com (e.g., QQ mail, Gmail)
+# IMAP SSL port
+IMAP_PORT=993  (Google search for ports, QQ is 995, Gmail is 993)
+# Email forwarded through CF
+IMAP_USER=xxxxxx@xxxxx.com (Your QQ or Gmail, needs to be configured as catch-all in CF, refer to steps above)
+# Email authorization code
 IMAP_PASS=xxxxxxxxxxxxx
-# [可选] 默认是收件箱(inbox)
-# 你也可以设置成其他的文件夹，只要你可以收到
+# [Optional] Default is inbox
+# You can set it to other folders as long as you can receive mail
 IMAP_DIR=
 ```
 
+## Disclaimer
 
-## 免责声明
+This tool is for learning and research purposes only, please comply with relevant terms of service. Users assume all responsibility for any consequences arising from the use of this tool. Commercial use of this tool is strictly prohibited, including but not limited to sales, rental, or other profit-making activities. Violations of the license terms will result in corresponding legal liability.
 
-本工具仅供学习研究使用，请遵守相关服务条款。使用本工具产生的任何后果由使用者自行承担。严禁将本工具用于任何商业用途，包括但不限于销售、租赁或其他营利行为。违反许可证条款的行为将承担相应的法律责任。
+## Buy the Author a Cup of Bubble Tea (To Motivate Updates)
 
-## 请作者喝一杯奶茶（这样才有更新的动力）
-
-![一张图片](./assets/imgs/7.jpg)
+![Image](./assets/imgs/7.jpg)
