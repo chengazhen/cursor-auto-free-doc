@@ -83,7 +83,7 @@ IMAP_SERVER=imap.xxxxx.com  # e.g., QQ Mail, Gmail
 IMAP_PORT=993               # QQ: 995, Gmail: 993
 IMAP_USER=xxxx@xxxx.com    # Receiving email address
 IMAP_PASS=xxxxxxxxxxxxx    # Email authorization code
-IMAP_DIR=                  # [Optional] Default is inbox
+# IMAP_DIR=                  # [Optional] Default is inbox
 ```
 
 ## Running & Verification
