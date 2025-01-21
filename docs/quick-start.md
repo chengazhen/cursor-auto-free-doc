@@ -30,9 +30,16 @@ If you see this security prompt, [click here for the solution](https://sysin.org
 
 ## Configuration
 
-### Method 1: Using tempmail.plus
+::: warning Important Prerequisite
+Cloudflare domain email is mandatory! Complete these steps first:
+1. Host your domain on Cloudflare
+2. Configure domain email in Cloudflare
+3. Set up email routing rules
+:::
 
-1. Host your domain on Cloudflare, then click "Email" on the left
+### Cloudflare Email Setup
+
+1. In Cloudflare dashboard, click "Email" on the left
    ![Cloudflare Email Setup](./assets/imgs/1.jpg)
 
 2. Click "Routing Rules"
@@ -41,10 +48,12 @@ If you see this security prompt, [click here for the solution](https://sysin.org
 3. Click "Edit" on the right
    ![Edit Rules](./assets/imgs/3.jpg)
 
-4. Select "Forward to Email" and enter your tempmail.plus address
+4. Select "Forward to Email" and enter your target email (tempmail or IMAP)
    ![Forward Settings](./assets/imgs/4.jpg)
 
-5. Download [.env.example](https://github.com/chengazhen/cursor-auto-free) and rename it to `.env`
+### Environment Configuration
+
+1. Download [.env.example](https://github.com/chengazhen/cursor-auto-free) and rename it to `.env`
    ![Environment Config](./assets/imgs/5.jpg)
 
 ::: tip Mac Users Note
@@ -54,24 +63,25 @@ touch .env
 ```
 :::
 
-6. Configure your `.env` file:
+### Method 1: Using Temporary Email (Recommended)
+
+Use [tempmail.plus](https://tempmail.plus/en/#!) as your receiving email, configure `.env` file:
 ```bash
-DOMAIN='xxxxx.me'    # Your email domain
-TEMP_MAIL='xxxxxx'   # Temporary email (tempmail.plus address)
+DOMAIN='xxxxx.me'    # Your Cloudflare domain
+TEMP_MAIL='xxxxxx'   # tempmail.plus generated email address
 ```
 
-### Method 2: Using IMAP
+### Method 2: Using IMAP Email
 
-If you prefer using your own email, configure IMAP:
-
+If temporary email is not suitable, you can use your own email (like QQ, Gmail) with IMAP:
 ```bash
-DOMAIN='wozhangsan.me'
-TEMP_MAIL=null
+DOMAIN='wozhangsan.me'  # Your Cloudflare domain
+TEMP_MAIL=null          # Set to null to enable IMAP mode
 
 # IMAP Server Configuration
 IMAP_SERVER=imap.xxxxx.com  # e.g., QQ Mail, Gmail
 IMAP_PORT=993               # QQ: 995, Gmail: 993
-IMAP_USER=xxxx@xxxx.com    # Your email address
+IMAP_USER=xxxx@xxxx.com    # Receiving email address
 IMAP_PASS=xxxxxxxxxxxxx    # Email authorization code
 IMAP_DIR=                  # [Optional] Default is inbox
 ```
