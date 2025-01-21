@@ -83,7 +83,7 @@ IMAP_SERVER=imap.xxxxx.com  # 例如：QQ邮箱，Gmail
 IMAP_PORT=993               # QQ: 995, Gmail: 993
 IMAP_USER=xxxx@xxxx.com    # 接收邮箱地址
 IMAP_PASS=xxxxxxxxxxxxx    # 邮箱授权码
-IMAP_DIR=                  # [可选] 默认为收件箱(inbox)
+# IMAP_DIR=                  # [可选] 默认为收件箱(inbox)
 ```
 
 ## 运行验证
