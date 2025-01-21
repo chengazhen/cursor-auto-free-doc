@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "cursor-auto-free",
-  description: "cursor auto free doc",
+  description: "Automatic account registration and token refresh for Cursor Pro",
 
   locales: {
     root: {
@@ -12,6 +12,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Home', link: '/' },
+          { text: 'GitHub', link: 'https://github.com/chengazhen/cursor-auto-free' }
         ],
         sidebar: [
           {
@@ -33,6 +34,8 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: '首页', link: '/zh/' },
+          { text: 'AI 助手', link: 'https://doubao.com/bot/x4wWvhTN' },
+          { text: 'GitHub', link: 'https://github.com/chengazhen/cursor-auto-free' }
         ],
         sidebar: [
           {
@@ -43,7 +46,7 @@ export default defineConfig({
           }
         ],
         socialLinks: [
-          { icon: 'github', link: 'https://github.com/chengazhen/cursor-auto-free' }
+          { icon: 'github', link: 'https://github.com/chengazhen/cursor-auto-free-doc' }
         ]
       }
     }
