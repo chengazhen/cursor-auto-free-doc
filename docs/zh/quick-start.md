@@ -117,4 +117,6 @@ IMAP_PASS=xxxxxxxxxxxxx    # 邮箱授权码
 
 如果这个工具对你有帮助，可以请作者喝杯奶茶，这样才有更新的动力～
 
+![💰 打赏作者](../assets/imgs/2641737539778_.pic.jpg)
+
 ![打赏](../assets/imgs/7.jpg) 
