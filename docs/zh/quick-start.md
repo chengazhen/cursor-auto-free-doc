@@ -69,6 +69,8 @@ touch .env
 ```bash
 DOMAIN='xxxxx.me'    # 你的 Cloudflare 域名
 TEMP_MAIL='xxxxxx'   # tempmail.plus 生成的临时邮箱地址
+TEMP_MAIL_EPIN=xxxxxx
+TEMP_MAIL_EXT=@mailto.plus
 ```
 
 ### 接收方式二：使用 IMAP 邮箱
@@ -80,7 +82,7 @@ TEMP_MAIL=null          # 设置为 null 启用 IMAP 模式
 
 # IMAP服务器配置
 IMAP_SERVER=imap.xxxxx.com  # 例如：QQ邮箱，Gmail
-IMAP_PORT=993               # QQ: 995, Gmail: 993
+IMAP_PORT=993               # 993
 IMAP_USER=xxxx@xxxx.com    # 接收邮箱地址
 IMAP_PASS=xxxxxxxxxxxxx    # 邮箱授权码
 # IMAP_DIR=                  # [可选] 默认为收件箱(inbox)
