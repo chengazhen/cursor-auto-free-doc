@@ -69,6 +69,8 @@ Use [tempmail.plus](https://tempmail.plus/en/#!) as your receiving email, config
 ```bash
 DOMAIN='xxxxx.me'    # Your Cloudflare domain
 TEMP_MAIL='xxxxxx'   # tempmail.plus generated email address
+TEMP_MAIL_EPIN=xxxxxx
+TEMP_MAIL_EXT=@mailto.plus
 ```
 
 ### Method 2: Using IMAP Email
@@ -80,7 +82,7 @@ TEMP_MAIL=null          # Set to null to enable IMAP mode
 
 # IMAP Server Configuration
 IMAP_SERVER=imap.xxxxx.com  # e.g., QQ Mail, Gmail
-IMAP_PORT=993               # QQ: 995, Gmail: 993
+IMAP_PORT=993               #  993
 IMAP_USER=xxxx@xxxx.com    # Receiving email address
 IMAP_PASS=xxxxxxxxxxxxx    # Email authorization code
 # IMAP_DIR=                  # [Optional] Default is inbox
