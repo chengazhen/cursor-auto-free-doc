@@ -12,9 +12,10 @@
 
 1. 从 [GitHub Releases](https://github.com/chengazhen/cursor-auto-free/releases) 下载最新版本
 2. 根据你的系统选择对应的版本：
-   - Windows：直接下载并运行 `CursorPro.exe`
+   - Windows：直接下载 `CursorPro.exe`
    - Mac（Intel）：选择 x64 版本
    - Mac（M系列）：选择 ARM64(aarch64) 版本
+3. 按照下文配置环境文件，下载人名数据，然后运行
 
 ### Mac 用户额外步骤
 
@@ -62,6 +63,11 @@ chmod +x ./CursorPro
 touch .env
 ```
 :::
+
+### 人名数据
+
+1. 下载人名数据文件 [names-dataset.txt](https://github.com/chengazhen/cursor-auto-free/blob/main/names-dataset.txt) 并放置在可执行文件同级目录下
+
 
 ### 接收方式一：使用临时邮箱（推荐）
 

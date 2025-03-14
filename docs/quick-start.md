@@ -12,9 +12,10 @@ Automatic account registration and local token refresh, completely hands-free op
 
 1. Download the latest version from [GitHub Releases](https://github.com/chengazhen/cursor-auto-free/releases)
 2. Choose the version for your system:
-   - Windows: Download and run `CursorPro.exe` directly
+   - Windows: Download `CursorPro.exe` directly
    - Mac (Intel): Choose x64 version
    - Mac (M series): Choose ARM64(aarch64) version
+3. Configure the environment file as described below, download the name data, and then run
 
 ### Additional Steps for Mac Users
 
@@ -62,6 +63,10 @@ If you can't rename, use terminal command:
 touch .env
 ```
 :::
+
+### Name Data
+
+1. Download the name data file from [names-dataset.txt](https://github.com/chengazhen/cursor-auto-free/blob/main/names-dataset.txt) and place it in the same directory as the executable
 
 ### Method 1: Using Temporary Email (Recommended)
 
