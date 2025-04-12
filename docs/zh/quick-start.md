@@ -2,6 +2,9 @@
 
 自动注册账号，自动刷新本地token，解放双手。
 
+如果你不会是开发（开发者请忽略），可以[点击这里获取成品](https://curser.zone.id/)
+
+
 ::: warning 重要提示
 1. 确保电脑安装了Google Chrome浏览器，没有？[请点击这里下载](https://www.google.cn/intl/zh-CN/chrome/)
 2. Cursor Web端必须登录账号，不管账号是否有效，登录是必须的
